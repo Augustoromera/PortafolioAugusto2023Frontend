@@ -1,26 +1,99 @@
-@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Kanit:wght@500&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins&family=Raleway:wght@700&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Kanit:wght@500&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins&family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: black;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
-.container {
+
+.home {
+    background-image: url("../assets/images/background/Background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.homebg {
     display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(0, 0, 0, 0.7) !important;
+}
+.hometext {
+    padding-top: 4%;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    padding: 30px 0 30px;
+    width: 100%;
+}
+.portfolio {
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    padding: 30px;
+    padding-left: 0%;
+    width: 100%;
 }
-
-.row.descrip-container {
-    display: flex;
-    max-width: 50%;
-    border-radius: 50%;
+.image-portfolio {
+    width: 25vw;
 }
-
+.about_description {
+    padding-top: 30vh;
+    width: 50%;
+    padding-right: 10vw;
+}
+.about_skills{
+    padding-top: 30vh;
+}
 .profile-image {
     margin-right: 20px;
-    max-width: 30%;
+    max-width: 17vw;
+    max-height: 17vw;
     border-radius: 50%;
+    object-fit: cover;
+}
+
+.home_text1,
+.home_text2,
+.home_text3 {
+    text-align: center;
+}
+
+.home_text2 {
+    font-family: "Roboto", sans-serif;
+    color: #007bff;
+    font-weight: 700;
+    font-size: 4.2em;
+}
+
+.home_text3 {
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 2.5em;
+}
+.skill_item {
+    padding: 20px;
+}
+.skill_item_logo {
+    width: 40px;
+}
+.skills_grid {
+    display: flex;
+    flex-direction: row;
 }

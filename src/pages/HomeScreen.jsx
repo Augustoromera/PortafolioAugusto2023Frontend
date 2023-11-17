@@ -1,9 +1,11 @@
 import BodyHome from '../components/BodyHome.jsx';
+import Header from '../components/Header.jsx';
 export const HomeScreen = () => {
     return (
-        <div>
+        <>
+            <Header></Header>
             <BodyHome></BodyHome>
-        </div>
+        </>
     )
 }
 export default HomeScreen;

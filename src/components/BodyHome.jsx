@@ -26,7 +26,7 @@ const BodyHome = () => {
             <div className='about'>
                 <div className="about_description">
                     <h2 className='about_title'>Sobre mi</h2>
-                    <p>
+                    <p className='about_title2'>
                         Desarrollador fullstack MERN.
                     </p>
 

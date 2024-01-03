@@ -109,6 +109,9 @@ body {
     display: flex;
     flex-direction: row;
 }
+.contact-me {
+    padding-top: 20vh;
+}
 @media (max-width: 721px) {
     .home {
         display: flex;
@@ -133,7 +136,7 @@ body {
         font-weight: 700;
         font-size: 2rem;
     }
-    
+
     .home_text3 {
         font-family: sans-serif;
         color: #ffffff;

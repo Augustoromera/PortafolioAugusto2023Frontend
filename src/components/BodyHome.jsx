@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/bodyhome.css';
 import profileImage from '../assets/images/profile/profile-augusto.png';
 import reactLogo from '../assets/images/logo/React.jpg';
@@ -6,12 +6,20 @@ import nodeLogo from '../assets/images/logo/node.png';
 import expressLogo from '../assets/images/logo/express.png';
 import mongoDBLogo from '../assets/images/logo/Mongo.png';
 import rapiburger from '../assets/images/portfolio/Rapiburger.png';
-
+import ScrollReveal from 'scrollreveal';
 const ProfileImage = () => {
     return <img src={profileImage} className='profile-image' alt="Profile Augusto" />;
 };
 
 const BodyHome = () => {
+    useEffect(() => {
+        ScrollReveal().reveal('.about_description', { delay: 300 });
+        ScrollReveal().reveal('.about_skills', { delay: 300 });
+        ScrollReveal().reveal('.portfolio', { delay: 300 });
+        ScrollReveal().reveal('.contact-me', { delay: 300 });
+        ScrollReveal().reveal('.container', { delay: 300 });
+        ScrollReveal().reveal('.col', { delay: 300 });
+    }, []);
     return (
         <>
             <div className='home'>

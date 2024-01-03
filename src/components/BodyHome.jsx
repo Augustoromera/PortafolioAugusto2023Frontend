@@ -30,7 +30,7 @@ const BodyHome = () => {
                         Desarrollador fullstack MERN.
                     </p>
 
-                    <p>
+                    <p className='description'>
                         Soy Augusto Romera, estudiante de Ingeniería en Sistemas con habilidades en desarrollo web. Tengo experiencia en colaboración y trabajo en equipo, y actualmente estoy buscando una oportunidad de tiempo completo en el campo del desarrollo web. Me apasiona aplicar mis conocimientos y habilidades para seguir mejorando y contribuir al éxito del equipo.
                     </p>
                     {/* Add more details about yourself as needed */}

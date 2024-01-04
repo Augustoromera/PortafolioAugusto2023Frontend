@@ -1,5 +1,5 @@
+/* Estilos generales */
 @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Kanit:wght@500&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins&family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Kanit:wght@500&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins&family=Raleway:wght@700&family=Roboto:wght@100;300;400&display=swap");
 
 * {
     margin: 0;
@@ -13,11 +13,17 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+/* Estilos de la sección de inicio */
 .home {
     background-image: url("../assets/images/background/Background.jpg");
     background-size: cover;
     background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .homebg {
     display: flex;
     justify-content: center;
@@ -30,56 +36,17 @@ body {
     background-attachment: fixed;
     background-color: rgb(0, 0, 0, 0.7) !important;
 }
+
 .hometext {
     padding-top: 4%;
 }
-.about {
-    font-size: larger;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    min-height: 100vh;
-    padding: 30px 0 100px;
-}
-.portfolio {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    padding-left: 0%;
-    width: 100%;
-}
-.image-portfolio {
-    width: 25vw;
-}
-.about_description {
-    width: 50%;
-    padding-right: 10vw;
-}
-.about_skills {
-    padding-top: 7vh;
-}
+
 .profile-image {
     margin-right: 20px;
     max-width: 17vw;
     max-height: 17vw;
     border-radius: 50%;
     object-fit: cover;
-}
-.about_title {
-    font-size: 3rem;
-    padding-bottom: 1rem;
-}
-.about_title2 {
-    font-size: 2rem;
-}
-.home_text1,
-.home_text2,
-.home_text3 {
-    text-align: center;
 }
 
 .home_text2 {
@@ -94,34 +61,127 @@ body {
     color: #ffffff;
     font-size: 2.5em;
 }
+
+/* Estilos de la sección "Sobre mí" */
+.about {
+    font-size: larger;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 0 100px;
+}
+
+.about_description {
+    width: 50%;
+    padding-right: 10vw;
+}
+
+.about_skills {
+    padding-top: 7vh;
+}
+
+.about_title {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+.about_title2 {
+    font-size: 2rem;
+}
+
 .description {
     font-family: "Roboto";
     font-size: 16px;
     line-height: 2.5;
 }
+
 .skill_item {
     padding: 20px;
 }
+
 .skill_item_logo {
     width: 40px;
 }
+
 .skills_grid {
     display: flex;
     flex-direction: row;
 }
+
+/* Estilos de la sección "Portafolio" */
+.portfolio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    padding-left: 0%;
+    width: 100%;
+}
+
+.image-portfolio {
+    width: 25vw;
+}
+
+.mt-2-container {
+    position: relative;
+    height: 240px;
+}
+
+.mt-2 {
+    position: relative;
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.mt-2-show {
+    opacity: 1;
+}
+
+.project-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: 0 5px;
+}
+
+.project-link:hover {
+    color: #007bff;
+}
+
+/* Estilos de la sección "Contacto" */
 .contact-me {
     padding-top: 20vh;
 }
+
+
+/* Media queries */
 @media (max-width: 721px) {
     .home {
         display: flex;
     }
+
     .homebg {
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .profile-image {
         margin-right: 0;
         margin-bottom: 10px;
@@ -130,6 +190,7 @@ body {
         border-radius: 50%;
         object-fit: cover;
     }
+
     .home_text2 {
         font-family: "Roboto", sans-serif;
         color: #007bff;
@@ -142,9 +203,11 @@ body {
         color: #ffffff;
         font-size: 2rem;
     }
+
     .about {
         flex-direction: column;
     }
+
     .about_description {
         width: 60%;
         padding-right: 10vw;

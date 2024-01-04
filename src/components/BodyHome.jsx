@@ -12,6 +12,36 @@ const ProfileImage = () => {
 };
 
 const BodyHome = () => {
+    const projects = [
+        { id: 1, name: 'RapiBurger', image: rapiburger, website: 'https://rapiburger.netlify.app/', github: 'https://github.com/rapiburger', text: 'Ir a rapiburguer' },
+        { id: 2, name: 'En proceso', image: rapiburger, website: 'https://proyecto2.com', github: 'https://github.com/proyecto2', text: 'Ir a proyecto 2' },
+        { id: 3, name: 'En proceso', image: rapiburger, website: 'https://proyecto3.com', github: 'https://github.com/proyecto3', text: 'Ir a proyecto 3' },
+        { id: 4, name: 'En proceso', image: rapiburger, website: 'https://proyecto4.com', github: 'https://github.com/proyecto4', text: 'Ir a proyecto 4' }
+    ];
+    const handleHover = (projectId, projectName) => {
+        const projectText = document.getElementById(`projectText-${projectId}`);
+        const linksContainer = document.createElement('div');
+
+        const websiteLink = document.createElement('a');
+        websiteLink.href = projects.find(project => project.id === projectId).website;
+        websiteLink.textContent = projects.find(project => project.id === projectId).text;
+        websiteLink.classList.add('project-link'); 
+        linksContainer.appendChild(websiteLink);
+        websiteLink.target = '_blank';
+        
+        linksContainer.appendChild(document.createTextNode(' | '));
+
+        const githubLink = document.createElement('a');
+        githubLink.href = projects.find(project => project.id === projectId).github;
+        githubLink.textContent = 'GitHub';
+        githubLink.classList.add('project-link');
+        linksContainer.appendChild(githubLink);
+        githubLink.target = '_blank';
+        projectText.innerHTML = '';
+        projectText.appendChild(linksContainer);
+        projectText.classList.add('mt-2-show');
+    };
+
     useEffect(() => {
         ScrollReveal().reveal('.about_description', { delay: 300 });
         ScrollReveal().reveal('.about_skills', { delay: 300 });
@@ -20,6 +50,7 @@ const BodyHome = () => {
         ScrollReveal().reveal('.container', { delay: 300 });
         ScrollReveal().reveal('.col', { delay: 300 });
     }, []);
+
     return (
         <>
             <div className='home'>
@@ -41,7 +72,6 @@ const BodyHome = () => {
                     <p className='description'>
                         Soy Augusto Romera, estudiante de Ingeniería en Sistemas con habilidades en desarrollo web. Tengo experiencia en colaboración y trabajo en equipo, y actualmente estoy buscando una oportunidad de tiempo completo en el campo del desarrollo web. Me apasiona aplicar mis conocimientos y habilidades para seguir mejorando y contribuir al éxito del equipo.
                     </p>
-                    {/* Add more details about yourself as needed */}
                 </div>
                 <div className="about_skills">
                     <div className="about_skill_title">
@@ -89,31 +119,22 @@ const BodyHome = () => {
 
                 <div className="container">
                     <div className="row justify-content-center">
-                        {/* Proyecto 1: RapiBurger */}
-                        <div className="col-12 col-sm-6 col-md-4 p-4 d-flex align-items-center flex-column">
-                            <img src={rapiburger} className="image-portfolio" alt="RapiBurger" />
-                            <span className="mt-2">RapiBurger</span>
-                        </div>
-                        {/* Proyecto 2: En Progreso */}
-                        <div className="col-12 col-sm-6 col-md-4 p-4 d-flex align-items-center flex-column">
-                            <img src={rapiburger} className="image-portfolio" alt="Proyecto en Progreso" />
-                            <span className="mt-2">Proyecto en Progreso</span>
-                        </div>
-                        {/* Proyecto 3: En Progreso */}
-                        <div className="col-12 col-sm-6 col-md-4 p-2 d-flex align-items-center flex-column">
-                            <img src={rapiburger} className="image-portfolio" alt="Proyecto en Progreso" />
-                            <span className="mt-2">Proyecto en Progreso</span>
-                        </div>
-                        {/* Proyecto 4: En Progreso */}
-                        <div className="col-12 col-sm-6 col-md-4 col-lg-2 p-2 d-flex align-items-center flex-column">
-                            <img src={rapiburger} className="image-portfolio" alt="Proyecto en Progreso" />
-                            <span className="mt-2">Proyecto en Progreso</span>
-                        </div>
+                        {projects.map((project) => (
+                            <div
+                                key={project.id}
+                                className="col-12 col-sm-6 col-md-4 p-4 d-flex align-items-center flex-column mt-2-container"
+                                onMouseEnter={() => handleHover(project.id, project.name)}
+                                >
+                                <img src={project.image} className="image-portfolio" alt={project.name} />
+                                <span id={`projectText-${project.id}`} className="mt-2"></span>
+                            </div>
+                        ))}
+
                     </div>
                 </div>
             </div >
             {/* Sección de Contacto */}
-            <div className="contact-me">
+            < div className="contact-me" >
                 <div className="contact-me-text px-3">
                     <h2>Contacto</h2>
                     <p>Contáctame si quieres que trabajemos juntos.</p>
@@ -143,7 +164,7 @@ const BodyHome = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
             <div className="copyright pt-5">
                 <p className="text-center">
                     Copyright © 2023. @augusto.romera. All Rights Reserved.

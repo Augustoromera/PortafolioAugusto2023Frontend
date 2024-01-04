@@ -14,6 +14,7 @@ const ProfileImage = () => {
 };
 
 const BodyHome = () => {
+    const currentYear = new Date().getFullYear();
     const projects = [
         { id: 1, name: 'RapiBurger', image: rapiburger, website: 'https://rapiburger.netlify.app/', github: 'https://github.com/rapiburger', text: 'Ir a rapiburguer' },
         { id: 2, name: 'En proceso', image: rapiburger, website: 'https://proyecto2.com', github: 'https://github.com/proyecto2', text: 'Ir a proyecto 2' },
@@ -123,11 +124,13 @@ const BodyHome = () => {
             </div>
             {/* Portafolio Section */}
             <div className="portfolio d-flex align-content-center justify-content-center">
-                <div className="description">
-                    <h2>Portafolio</h2>
-                    <p>
-                        Proyectos en los que he participado.
-                    </p>
+                <div className="description-container  ">
+                    <div className="description-port">
+                        <h2>Portafolio</h2>
+                        <p>
+                            Proyectos en los que he participado.
+                        </p>
+                    </div>
                 </div>
 
                 <div className="container">
@@ -148,7 +151,7 @@ const BodyHome = () => {
                 </div>
             </div >
             <div className="contact-me">
-                <div className="contact-me-text px-3">
+                <div className="contact-me-text ">
                     <h2>Contacto</h2>
                     <p>Contáctame si quieres que trabajemos juntos.</p>
                 </div>
@@ -186,7 +189,7 @@ const BodyHome = () => {
             </div>
             <div className="copyright pt-5">
                 <p className="text-center">
-                    Copyright © 2023. @augusto.romera. All Rights Reserved.
+                    Copyright © {currentYear}. @augusto.romera. All Rights Reserved.
                 </p>
             </div>
         </>

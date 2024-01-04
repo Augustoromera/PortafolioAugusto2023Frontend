@@ -1,9 +1,9 @@
 /* Estilos generales */
 @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Kanit:wght@500&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins&family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap");
 :root {
-    --blue: #3367d6; 
+    --blue: #3367d6;
     --white: #ffffff;
-    --gray: #414141; 
+    --gray: #414141;
 }
 
 * {
@@ -179,6 +179,12 @@ body {
 .project-link:hover {
     color: #3367d6;
 }
+.description-container {
+    width: 100%;
+}
+.description-port {
+    padding-left: 50px;
+}
 
 /* Estilos de la sección "Contacto" */
 .contact-me {
@@ -198,13 +204,15 @@ body {
 }
 
 .contact-icon {
-    transition: filter 0.3s; 
+    transition: filter 0.3s;
 }
 
 .contact-icon:hover {
-    filter: grayscale(100%); 
+    filter: grayscale(100%);
 }
-
+.contact-me-text{
+    padding-left: 50px;
+}
 /* Media queries */
 @media (max-width: 721px) {
     .home {
@@ -246,6 +254,6 @@ body {
 
     .about_description {
         width: 60%;
-        padding-right: 10vw;
+        padding-right: 30px;
     }
 }

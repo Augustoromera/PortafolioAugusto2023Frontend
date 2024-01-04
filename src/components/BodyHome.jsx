@@ -53,11 +53,19 @@ const BodyHome = () => {
     };
 
     useEffect(() => {
-        ScrollReveal().reveal('.about_description', { delay: 300 });
-        ScrollReveal().reveal('.about_skills', { delay: 300 });
-        ScrollReveal().reveal('.portfolio', { delay: 300 });
-        ScrollReveal().reveal('.contact-me', { delay: 300 });
-        ScrollReveal().reveal('.col', { delay: 300 });
+        //         ScrollReveal().reveal('.homebg', { delay: 300 });
+        //         ScrollReveal().reveal('.hometext', { delay: 600 });
+        ScrollReveal().reveal('.about_title', { delay: 300 });
+        ScrollReveal().reveal('.about_title2', { delay: 300 });
+        ScrollReveal().reveal('.description', { delay: 600 });
+        ScrollReveal().reveal('.download-button', { delay: 600 });
+
+        ScrollReveal().reveal('.about_skill_title', { delay: 600 });
+        ScrollReveal().reveal('.skill_item', { delay: 600 });
+        ScrollReveal().reveal('.about_skills', { delay: 600 });
+
+        ScrollReveal().reveal('.portfolio', { delay: 600 });
+        ScrollReveal().reveal('.contact-me', { delay: 600 });
     }, []);
 
     return (
@@ -138,9 +146,10 @@ const BodyHome = () => {
                         {projects.map((project) => (
                             <div
                                 key={project.id}
-                                className="col-12 col-sm-6 col-md-4 p-4 d-flex align-items-center flex-column mt-2-container"
+                                className="col-12 col-sm-6 col-md-4  p-4 d-flex align-items-center flex-column mt-2-container h-100"
                                 onMouseEnter={() => handleHover(project.id, project.name)}
                                 onMouseLeave={() => handleMouseLeave(project.id)}
+                                style={{ minHeight: '100%', display: 'flex', flexDirection: 'column' }}
                             >
                                 <img src={project.image} className="image-portfolio" alt={project.name} />
                                 <span id={`projectText-${project.id}`} className="mt-2"></span>

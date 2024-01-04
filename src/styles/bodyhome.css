@@ -1,5 +1,10 @@
 /* Estilos generales */
 @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Kanit:wght@500&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins&family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap");
+:root {
+    --blue: #3367d6; 
+    --white: #ffffff;
+    --gray: #414141; 
+}
 
 * {
     margin: 0;
@@ -8,7 +13,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: var(--white);
     color: black;
     font-family: "Roboto", sans-serif;
 }
@@ -51,7 +56,7 @@ body {
 
 .home_text2 {
     font-family: "Roboto", sans-serif;
-    color: #007bff;
+    color: var(--blue);
     font-weight: 700;
     font-size: 4.2em;
 }
@@ -110,7 +115,20 @@ body {
     display: flex;
     flex-direction: row;
 }
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
 
+.download-button:hover {
+    background-color: var(--gray);
+}
 /* Estilos de la sección "Portafolio" */
 .portfolio {
     display: flex;
@@ -136,7 +154,7 @@ body {
     left: 50%;
     bottom: 0%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #414141;
     color: #fff;
     width: 100%;
     text-align: center;
@@ -145,7 +163,6 @@ body {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     opacity: 0;
-    transition: opacity 1.5s;
 }
 
 .mt-2-show {
@@ -160,14 +177,33 @@ body {
 }
 
 .project-link:hover {
-    color: #007bff;
+    color: #3367d6;
 }
 
 /* Estilos de la sección "Contacto" */
 .contact-me {
-    padding-top: 20vh;
+    padding: 150px 0 100px;
+}
+.contact-me-container {
+    padding: 3rem;
+}
+.plain-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
+.iconlink:hover {
+    color: var(--gray) !important;
+}
+
+.contact-icon {
+    transition: filter 0.3s; 
+}
+
+.contact-icon:hover {
+    filter: grayscale(100%); 
+}
 
 /* Media queries */
 @media (max-width: 721px) {
@@ -193,7 +229,7 @@ body {
 
     .home_text2 {
         font-family: "Roboto", sans-serif;
-        color: #007bff;
+        color: #3367d6;
         font-weight: 700;
         font-size: 2rem;
     }

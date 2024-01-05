@@ -6,6 +6,8 @@ import nodeLogo from '../assets/images/logo/node.png';
 import expressLogo from '../assets/images/logo/express.png';
 import mongoDBLogo from '../assets/images/logo/Mongo.png';
 import rapiburger from '../assets/images/portfolio/Rapiburger.png';
+import portfolio from '../assets/images/portfolio/portfolioIcon.jpg';
+
 import instagram from '../assets/images/logo/Instagram-Glyph-Color-Logo.wine.png';
 import downloadIcon from '../assets/images/logo/gold-button-009.svg';
 import curriculumPDF from '../assets/files/Curriculum Vitae augusto.pdf';
@@ -17,11 +19,9 @@ const ProfileImage = () => {
 const BodyHome = ({ onSectionChange }) => {
     const currentYear = new Date().getFullYear();
     const projects = [
-        { id: 1, name: 'RapiBurger', image: rapiburger, website: 'https://rapiburger.netlify.app/', github: 'https://github.com/rapiburger', text: 'Ir a rapiburguer' },
-        { id: 2, name: 'En proceso', image: rapiburger, website: 'https://proyecto2.com', github: 'https://github.com/proyecto2', text: 'Ir a proyecto 2' },
-        { id: 3, name: 'En proceso', image: rapiburger, website: 'https://proyecto3.com', github: 'https://github.com/proyecto3', text: 'Ir a proyecto 3' },
-        { id: 4, name: 'En proceso', image: rapiburger, website: 'https://proyecto4.com', github: 'https://github.com/proyecto4', text: 'Ir a proyecto 4' }
-    ];
+        { id: 1, name: 'RapiBurger', image: rapiburger, website: 'https://rapiburger.netlify.app/', github: 'https://github.com/Augustoromera/Group-3-proyecto-final-Rolling-Code', github2: 'https://github.com/Augustoromera/Proyecto-Final-RC-Grupo3-Backend', text: 'Ir a rapiburger' },
+        { id: 2, name: 'Portfolio', image: portfolio, website: '', github: 'https://github.com/Augustoromera/PortafolioAugusto2023Frontend', text: 'Ir al portafolio' },
+        ];
     const handleHover = (projectId) => {
         const projectText = document.getElementById(`projectText-${projectId}`);
         const linksContainer = document.createElement('div');
@@ -30,17 +30,33 @@ const BodyHome = ({ onSectionChange }) => {
         websiteLink.href = projects.find(project => project.id === projectId).website;
         websiteLink.textContent = projects.find(project => project.id === projectId).text;
         websiteLink.classList.add('project-link');
-        linksContainer.appendChild(websiteLink);
         websiteLink.target = '_blank';
-
-        linksContainer.appendChild(document.createTextNode(' | '));
+        if (projects.find(project => project.id === projectId).name != "Portfolio") {
+            linksContainer.appendChild(websiteLink);
+            linksContainer.appendChild(document.createTextNode(' | '));
+        }
 
         const githubLink = document.createElement('a');
-        githubLink.href = projects.find(project => project.id === projectId).github;
-        githubLink.textContent = 'GitHub';
+        const github1 = projects.find(project => project.id === projectId).github;
+        const github2 = projects.find(project => project.id === projectId).github2;
+
+        // Enlace iterativo 1
+        githubLink.href = github1;
+        if (github2) { githubLink.textContent = 'Git front'; } else githubLink.textContent = 'Github';
         githubLink.classList.add('project-link');
         linksContainer.appendChild(githubLink);
         githubLink.target = '_blank';
+
+        if (github2) {
+            linksContainer.appendChild(document.createTextNode(' | '));
+            const githubLink2 = document.createElement('a');
+            githubLink2.href = github2;
+            githubLink2.textContent = 'Git back';
+            githubLink2.classList.add('project-link');
+            linksContainer.appendChild(githubLink2);
+            githubLink2.target = '_blank';
+        }
+
         projectText.innerHTML = '';
         projectText.appendChild(linksContainer);
         projectText.classList.add('mt-2-show');
@@ -69,9 +85,9 @@ const BodyHome = ({ onSectionChange }) => {
         const contactTop = contactSection.offsetTop;
         const contactBottom = contactTop + contactSection.offsetHeight;
         const offset = 100;
-        if (scrollPosition >=  (aboutTop -60) && scrollPosition  < (aboutBottom -100)) {
+        if (scrollPosition >= (aboutTop - 60) && scrollPosition < (aboutBottom - 100)) {
             currentSection = 'about';
-        } else if (scrollPosition >= (portfolioTop -100) && scrollPosition < portfolioBottom) {
+        } else if (scrollPosition >= (portfolioTop - 100) && scrollPosition < portfolioBottom) {
             currentSection = 'portfolio';
         }
 

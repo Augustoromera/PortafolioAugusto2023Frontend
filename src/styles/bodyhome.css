@@ -277,7 +277,7 @@ body {
 
     .home_text2 {
         font-family: "Roboto", sans-serif;
-        color: #3367d6;
+        color: var(--gold);
         font-weight: 700;
         font-size: 2rem;
     }

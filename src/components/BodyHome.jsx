@@ -7,13 +7,14 @@ import expressLogo from '../assets/images/logo/express.png';
 import mongoDBLogo from '../assets/images/logo/Mongo.png';
 import rapiburger from '../assets/images/portfolio/Rapiburger.png';
 import instagram from '../assets/images/logo/Instagram-Glyph-Color-Logo.wine.png';
+import downloadIcon from '../assets/images/logo/gold-button-009.svg';
 import curriculumPDF from '../assets/files/Curriculum Vitae augusto.pdf';
 import ScrollReveal from 'scrollreveal';
 const ProfileImage = () => {
     return <img src={profileImage} className='profile-image' alt="Profile Augusto" />;
 };
 
-const BodyHome = () => {
+const BodyHome = ({ onSectionChange }) => {
     const currentYear = new Date().getFullYear();
     const projects = [
         { id: 1, name: 'RapiBurger', image: rapiburger, website: 'https://rapiburger.netlify.app/', github: 'https://github.com/rapiburger', text: 'Ir a rapiburguer' },
@@ -51,6 +52,38 @@ const BodyHome = () => {
         projectText.innerHTML = '';
         projectText.classList.remove('mt-2-show');
     };
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        const aboutSection = document.getElementById('about');
+        const portfolioSection = document.getElementById('portfolio');
+        const contactSection = document.getElementById('contact');
+
+        let currentSection = 'home';
+
+        const aboutTop = aboutSection.offsetTop;
+        const aboutBottom = aboutTop + aboutSection.offsetHeight;
+
+        const portfolioTop = portfolioSection.offsetTop;
+        const portfolioBottom = portfolioTop + portfolioSection.offsetHeight;
+
+        const contactTop = contactSection.offsetTop;
+        const contactBottom = contactTop + contactSection.offsetHeight;
+        const offset = 100;
+        if (scrollPosition >=  (aboutTop -60) && scrollPosition  < (aboutBottom -100)) {
+            currentSection = 'about';
+        } else if (scrollPosition >= (portfolioTop -100) && scrollPosition < portfolioBottom) {
+            currentSection = 'portfolio';
+        }
+
+
+        if (scrollPosition >= contactTop - offset && scrollPosition < contactBottom) {
+            currentSection = 'contact';
+        }
+        onSectionChange(currentSection);
+    };
+
+
+
 
     useEffect(() => {
         //         ScrollReveal().reveal('.homebg', { delay: 300 });
@@ -65,8 +98,18 @@ const BodyHome = () => {
         ScrollReveal().reveal('.about_skills', { delay: 600 });
 
         ScrollReveal().reveal('.portfolio', { delay: 600 });
-        ScrollReveal().reveal('.contact-me', { delay: 600 });
+        ScrollReveal().reveal('.contact-me', { delay: 300 });
+
     }, []);
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [onSectionChange]);
+
+
 
     return (
         <>
@@ -79,7 +122,7 @@ const BodyHome = () => {
                     </div>
                 </div>
             </div>
-            <div className='about'>
+            <div id="about" className='about'>
                 <div className="about_description">
                     <h2 className='about_title'>Sobre mi</h2>
                     <p className='about_title2'>
@@ -89,9 +132,8 @@ const BodyHome = () => {
                     <p className='description'>
                         Soy Augusto Romera, estudiante de Ingeniería en Sistemas con habilidades en desarrollo web. Tengo experiencia en colaboración y trabajo en equipo, y actualmente estoy buscando una oportunidad de tiempo completo en el campo del desarrollo web. Me apasiona aplicar mis conocimientos y habilidades para seguir mejorando y contribuir al éxito del equipo.
                     </p>
-                    {/* Botón de Descargar CV con ícono de descarga */}
                     <a href={curriculumPDF} download className="download-button">
-                        <i className="fas fa-download download-icon"></i>
+                        <img src={downloadIcon} alt="Download Icon" className="download-icon" />
                         <span className="download-text"> Descargar CV</span>
                     </a>
                 </div>
@@ -131,7 +173,7 @@ const BodyHome = () => {
                 </div>
             </div>
             {/* Portafolio Section */}
-            <div className="portfolio d-flex align-content-center justify-content-center">
+            <div id="portfolio" className="portfolio d-flex align-content-center justify-content-center">
                 <div className="description-container  ">
                     <div className="description-port">
                         <h2>Portafolio</h2>
@@ -159,7 +201,7 @@ const BodyHome = () => {
                     </div>
                 </div>
             </div >
-            <div className="contact-me">
+            <div id="contact" className="contact-me">
                 <div className="contact-me-text ">
                     <h2>Contacto</h2>
                     <p>Contáctame si quieres que trabajemos juntos.</p>

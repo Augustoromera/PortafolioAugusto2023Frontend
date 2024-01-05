@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Kanit:wght@500&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins&family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap");
 
 :root {
-    --blue: #3367d6;
+    --gold: #fabc5d;
     --white: #ffffff;
     --gray: #414141;
 }
@@ -21,7 +21,7 @@ body {
 
 /* Estilos de la sección de inicio */
 .home {
-    background-image: url("../assets/images/background/Background.jpg");
+    background-image: url("../assets/images/background/bg.png");
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -57,7 +57,7 @@ body {
 
 .home_text2 {
     font-family: "Roboto", sans-serif;
-    color: var(--blue);
+    color: var(--gold);
     font-weight: 700;
     font-size: 4.2em;
 }
@@ -124,15 +124,32 @@ body {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: var(--blue);
-    color: var(--white);
+    height: 100px;
+    width: 200px;
+    background-size: cover;
+    position: relative;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    color: var(--white);
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+.download-button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
-.download-button:hover {
-    background-color: var(--gray);
+.download-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
 }
 
 /* Estilos de la sección "Portafolio" */
@@ -184,7 +201,7 @@ body {
 }
 
 .project-link:hover {
-    color: #3367d6;
+    color: #fabc5d;
 }
 
 .description-container {

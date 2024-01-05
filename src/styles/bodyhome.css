@@ -205,6 +205,8 @@ body {
 }
 
 .description-container {
+    padding-bottom: 70px;
+
     width: 100%;
 }
 
@@ -214,7 +216,7 @@ body {
 
 /* Estilos de la sección "Contacto" */
 .contact-me {
-    padding: 120px 0 100px;
+    padding: 190px 0 100px;
 }
 
 .contact-me-container {
@@ -301,6 +303,7 @@ body {
 }
 
 @media (min-width: 575px) and (max-width: 721px) {
+    
     .image-portfolio {
         width: 250px;
     }
@@ -326,6 +329,9 @@ body {
 }
 
 @media (max-width: 575px) {
+    .contact-me {
+        padding: 120px 0 100px;
+    }
     .mt-2-container {
         padding: 1rem;
     }

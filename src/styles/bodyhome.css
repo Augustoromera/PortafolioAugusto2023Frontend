@@ -81,6 +81,7 @@ body {
 }
 
 .about_description {
+        padding-left: 50px;
     width: 50%;
     padding-right: 10vw;
 }
@@ -303,7 +304,6 @@ body {
 }
 
 @media (min-width: 575px) and (max-width: 721px) {
-    
     .image-portfolio {
         width: 250px;
     }
@@ -321,6 +321,7 @@ body {
     .about {
         flex-direction: column;
     }
+    
 
     .about_description {
         width: 60%;
@@ -355,7 +356,17 @@ body {
     }
 
     .about_description {
-        width: 60%;
+        padding: 0px !important;
+        width: 80%;
         padding-right: 30px;
+    }
+    .about_skills {
+        padding-left: 50px;
+
+    }
+}
+@media (max-width: 347px) {
+    .about_skills {
+        padding-left: 50px;
     }
 }

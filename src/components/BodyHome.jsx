@@ -5,6 +5,13 @@ import reactLogo from '../assets/images/logo/React.jpg';
 import nodeLogo from '../assets/images/logo/node.png';
 import expressLogo from '../assets/images/logo/express.png';
 import mongoDBLogo from '../assets/images/logo/Mongo.png';
+import html from '../assets/images/logo/html.png'
+import css from '../assets/images/logo/css.png'
+import java from '../assets/images/logo/java.png'
+import jvs from '../assets/images/logo/js.png'
+import spring from '../assets/images/logo/spring-boot-logo.png.webp'
+import mysql from '../assets/images/logo/mysql.png'
+
 import rapiburger from '../assets/images/portfolio/Rapiburger.png';
 import portfolio from '../assets/images/portfolio/portfolioIcon.jpg';
 
@@ -21,7 +28,7 @@ const BodyHome = ({ onSectionChange }) => {
     const projects = [
         { id: 1, name: 'RapiBurger', image: rapiburger, website: 'https://rapiburger.netlify.app/', github: 'https://github.com/Augustoromera/Group-3-proyecto-final-Rolling-Code', github2: 'https://github.com/Augustoromera/Proyecto-Final-RC-Grupo3-Backend', text: 'Ir a rapiburger' },
         { id: 2, name: 'Portfolio', image: portfolio, website: '', github: 'https://github.com/Augustoromera/PortafolioAugusto2023Frontend', text: 'Ir al portafolio' },
-        ];
+    ];
     const handleHover = (projectId) => {
         const projectText = document.getElementById(`projectText-${projectId}`);
         const linksContainer = document.createElement('div');
@@ -146,7 +153,7 @@ const BodyHome = ({ onSectionChange }) => {
                     </p>
 
                     <p className='description'>
-                        Soy Augusto Romera, estudiante de Ingeniería en Sistemas con habilidades en desarrollo web. Tengo experiencia en colaboración y trabajo en equipo, y actualmente estoy buscando una oportunidad de tiempo completo en el campo del desarrollo web. Me apasiona aplicar mis conocimientos y habilidades para seguir mejorando y contribuir al éxito del equipo.
+                    Soy Augusto Romera, un estudiante de 24 años de Ingeniería en Sistemas. Mi formación académica incluye un año completo de estudios, respaldado por valiosa experiencia en desarrollo web. Busco oportunidades de tiempo completo para aplicar y expandir mis habilidades, contribuyendo al éxito del equipo con mi pasión por el desarrollo.
                     </p>
                     <a href={curriculumPDF} download className="download-button">
                         <img src={downloadIcon} alt="Download Icon" className="download-icon" />
@@ -155,37 +162,73 @@ const BodyHome = ({ onSectionChange }) => {
                 </div>
                 <div className="about_skills">
                     <div className="about_skill_title">
-                        <h2>Skills & Technologies</h2>
+                        <h2>Habilidades y tecnologías</h2>
                     </div>
                     <div className="container-fluid">
                         <div className="row">
-                            {/* React */}
                             <div className="col skill_item">
+                                <img src={html} className="skill_item_logo" alt="HTML" />
+                                <br />
+                                <span>HTML</span>
+                            </div>
+                            <div className="col skill_item">
+                                <img src={css} className="skill_item_logo" alt="CSS" />
+                                <br />
+                                <span>CSS</span>
+                            </div>
+                            <div className="col skill_item">
+                                <img src={jvs} className="skill_item_logo" alt="JavaScript" />
+                                <br />
+                                <span>JavaScript</span>
+                            </div>
+                           
+                        </div>
+                        <div className="row">
+                        <div className="col skill_item">
                                 <img src={reactLogo} className="skill_item_logo" alt="React" />
                                 <br />
                                 <span>React</span>
                             </div>
-                            {/* Node.js */}
                             <div className="col skill_item">
                                 <img src={nodeLogo} className="skill_item_logo" alt="Node.js" />
                                 <br />
                                 <span>Node.js</span>
                             </div>
-                            {/* Express.js */}
                             <div className="col skill_item">
                                 <img src={expressLogo} className="skill_item_logo" alt="Express.js" />
                                 <br />
                                 <span>Express.js</span>
                             </div>
+                           
+                            
                         </div>
                         <div className="row">
-                            <div className="col skill_item">
+                        <div className="col skill_item">
                                 <img src={mongoDBLogo} className="skill_item_logo" alt="MongoDB" />
                                 <br />
                                 <span>MongoDB</span>
                             </div>
+                            <div className="col skill_item">
+                                <img src={java} className="skill_item_logo" alt="Java" />
+                                <br />
+                                <span>Java</span>
+                            </div>
+                            <div className="col skill_item">
+                                <img src={spring} className="skill_item_logo" alt="Spring Boot" />
+                                <br />
+                                <span>Spring Boot</span>
+                            </div>
+                            
+                        </div>
+                        <div className="row">
+                        <div className="col skill_item">
+                                <img src={mysql} className="skill_item_logo" alt="MySQL" />
+                                <br />
+                                <span>MySQL</span>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             {/* Portafolio Section */}

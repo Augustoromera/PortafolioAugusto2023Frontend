@@ -81,7 +81,7 @@ body {
 }
 
 .about_description {
-        padding-left: 50px;
+    padding-left: 50px;
     width: 50%;
     padding-right: 10vw;
 }
@@ -321,7 +321,6 @@ body {
     .about {
         flex-direction: column;
     }
-    
 
     .about_description {
         width: 60%;
@@ -358,11 +357,10 @@ body {
     .about_description {
         padding: 0px !important;
         width: 80%;
-        padding-right: 30px;
+        padding-right: 10px;
     }
-    .about_skills {
+    .about_skill_title {
         padding-left: 30px;
-
     }
 }
 @media (max-width: 347px) {

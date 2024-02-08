@@ -63,11 +63,26 @@ body {
 }
 
 .home_text3 {
-    font-family: sans-serif;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
     color: #ffffff;
+    width: 20ch;
     font-size: 2.5em;
+    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    overflow: hidden;
 }
-
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
 /* Estilos de la sección "Sobre mí" */
 .about {
     font-size: larger;
@@ -224,11 +239,7 @@ body {
     padding: 3rem;
 }
 
-.plain-link {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
+
 
 .iconlink:hover {
     color: var(--gray) !important;

@@ -288,7 +288,7 @@ const BodyHome = ({ onSectionChange }) => {
                             <span className="textcontact">Seguir</span>
                         </div>
                         <div className="col-6 col-md-3 p-2 d-flex align-items-center flex-column">
-                            <a href="https:/www.linkedin.com/in/augusto-romera" className="plain-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/augusto-romera" className="plain-link" target="_blank" rel="noopener noreferrer">
                                 <i className="fab fa-linkedin-in fa-3x text-primary iconlink"></i>
                             </a>
                             <span className="textcontact">Contactar</span>

@@ -68,7 +68,7 @@ body {
     white-space: nowrap;
     border-right: 4px solid;
     color: #ffffff;
-    width: 16ch;
+    width: 19.5ch;
     font-size: 2.5em;
     animation: typing 2s steps(12), blink .5s infinite step-end alternate;
     overflow: hidden;
@@ -306,6 +306,7 @@ body {
     .home_text3 {
         font-family: sans-serif;
         color: #ffffff;
+        width: 16.2ch;
         font-size: 2rem;
     }
 }

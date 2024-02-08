@@ -68,7 +68,7 @@ body {
     white-space: nowrap;
     border-right: 4px solid;
     color: #ffffff;
-    width: 20ch;
+    width: 16ch;
     font-size: 2.5em;
     animation: typing 2s steps(12), blink .5s infinite step-end alternate;
     overflow: hidden;
@@ -83,6 +83,7 @@ body {
         border-color: transparent;
     }
 }
+
 /* Estilos de la sección "Sobre mí" */
 .about {
     font-size: larger;
@@ -269,6 +270,12 @@ body {
     }
 }
 @media (max-width: 991px) {
+    .hometext {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4%;
+    }
     .home {
         display: flex;
     }

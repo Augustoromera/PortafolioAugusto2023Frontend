@@ -29,7 +29,18 @@
     top: 0;
     z-index: 999;
     background: black !important;
-    backdrop-filter: blur(10px) !important;
+    transition: background-color 0.5s ease;
+
+}
+
+.inline-block-class {
+    padding-left: 15px !important;
+    position: fixed; 
+    width: 100%; 
+    top: 0;
+    z-index: 999;
+    background: transparent !important;
+    backdrop-filter: blur(0px) !important;
 }
 
 .navbar-image {

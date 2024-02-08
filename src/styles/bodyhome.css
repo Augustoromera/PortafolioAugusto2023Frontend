@@ -33,7 +33,7 @@ body {
 .homebg {
     display: flex;
     justify-content: center;
-    padding-top: 20vh;
+    padding-top: 30vh;
     flex-direction: row;
     min-height: 100vh;
     width: 100%;

@@ -1,18 +1,19 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import "../styles/header.css";
 import logoTipo from "../assets/images/logo/Augusto romera dev.png";
 
-const Header = ({ activeSection }) => {
+const Header = ({ activeSection, navBarClass }) => {
     const [expanded, setExpanded] = useState(false);
-
+    const navLinkClass = navBarClass;
     const handleLinkClick = () => {
         setExpanded(false);  // Cerrar la barra de navegación después de hacer clic en un enlace
     };
 
     return (
-        <Navbar expand="lg" data-bs-theme="dark" className={`navbarmain`} expanded={expanded} onSelect={() => setExpanded(false)}>
+        <Navbar expand="lg" data-bs-theme="dark" className={`navbarmain ${navLinkClass}`} expanded={expanded} onSelect={() => setExpanded(false)}>
             <Container>
                 <Navbar.Brand>
                     <img

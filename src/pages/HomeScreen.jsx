@@ -13,9 +13,9 @@ export const HomeScreen = () => {
             const windowHeight = window.innerHeight;
             const scrollThreshold = 0.05;
 
-            if (scrollY > windowHeight * scrollThreshold) {
+            if (scrollY < windowHeight * scrollThreshold) {
                 setNavBarClass("");
-                
+
             } else {
                 setNavBarClass("inline-block-class");
             }
@@ -29,7 +29,7 @@ export const HomeScreen = () => {
     }, []);
     return (
         <>
-            <Header activeSection={activeSection} navBarClass={navBarClass}/>
+            <Header activeSection={activeSection} navBarClass={navBarClass} />
             <BodyHome onSectionChange={handleSectionChange} />
         </>
     );

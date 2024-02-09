@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import "../styles/header.css";
@@ -11,7 +11,6 @@ const Header = ({ activeSection, navBarClass }) => {
     const handleLinkClick = () => {
         setExpanded(false);  // Cerrar la barra de navegación después de hacer clic en un enlace
     };
-
     return (
         <Navbar expand="lg" data-bs-theme="dark" className={`navbarmain ${navLinkClass}`} expanded={expanded} onSelect={() => setExpanded(false)}>
             <Container>

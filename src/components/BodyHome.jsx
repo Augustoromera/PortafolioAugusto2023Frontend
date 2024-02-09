@@ -153,7 +153,7 @@ const BodyHome = ({ onSectionChange }) => {
                     </p>
 
                     <p className='description'>
-                    Soy Augusto Romera, un estudiante de 24 años de Ingeniería en Sistemas. Mi formación académica incluye un año completo de estudios, respaldado por valiosa experiencia en desarrollo web. Busco oportunidades de tiempo completo para aplicar y expandir mis habilidades, contribuyendo al éxito del equipo con mi pasión por el desarrollo.
+                    Soy Augusto Romera, un estudiante de 24 años de Ingeniería en Sistemas. Mi formación académica incluye dos años completo de estudios para fullstack, respaldado por experiencia en desarrollo web. Busco oportunidades de tiempo completo para aplicar y expandir mis habilidades.
                     </p>
                     <a href={curriculumPDF} download className="download-button">
                         <img src={downloadIcon} alt="Download Icon" className="download-icon" />

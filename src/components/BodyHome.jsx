@@ -153,7 +153,7 @@ const BodyHome = ({ onSectionChange }) => {
                     </p>
 
                     <p className='description'>
-                    Soy Augusto Romera, un estudiante de 24 años de Ingeniería en Sistemas. Mi formación académica incluye dos años completo de estudios para fullstack, respaldado por experiencia en desarrollo web. Busco oportunidades de tiempo completo para aplicar y expandir mis habilidades.
+                        Soy Augusto Romera, un estudiante de 24 años de Ingeniería en Sistemas. Mi formación académica incluye dos años completo de estudios para fullstack, respaldado por experiencia en desarrollo web. Busco oportunidades de tiempo completo para aplicar y expandir mis habilidades.
                     </p>
                     <a href={curriculumPDF} download className="download-button">
                         <img src={downloadIcon} alt="Download Icon" className="download-icon" />
@@ -181,10 +181,10 @@ const BodyHome = ({ onSectionChange }) => {
                                 <br />
                                 <span>JavaScript</span>
                             </div>
-                           
+
                         </div>
                         <div className="row">
-                        <div className="col skill_item">
+                            <div className="col skill_item">
                                 <img src={reactLogo} className="skill_item_logo" alt="React" />
                                 <br />
                                 <span>React</span>
@@ -199,11 +199,11 @@ const BodyHome = ({ onSectionChange }) => {
                                 <br />
                                 <span>Express.js</span>
                             </div>
-                           
-                            
+
+
                         </div>
                         <div className="row">
-                        <div className="col skill_item">
+                            <div className="col skill_item">
                                 <img src={mongoDBLogo} className="skill_item_logo" alt="MongoDB" />
                                 <br />
                                 <span>MongoDB</span>
@@ -218,10 +218,10 @@ const BodyHome = ({ onSectionChange }) => {
                                 <br />
                                 <span>Spring Boot</span>
                             </div>
-                            
+
                         </div>
                         <div className="row">
-                        <div className="col skill_item">
+                            <div className="col skill_item">
                                 <img src={mysql} className="skill_item_logo" alt="MySQL" />
                                 <br />
                                 <span>MySQL</span>
@@ -297,6 +297,12 @@ const BodyHome = ({ onSectionChange }) => {
                 </div>
 
             </div>
+            <div className="wsp" >
+                <a href="https://wa.link/cjq5u5" className='btn-wsp' target='_blank' rel="noopener noreferrer">
+                <i className="fa-brands fa-whatsapp fa-2xl" ></i>
+                </a>
+            </div>
+
             <div className="copyright pt-5">
                 <p className="text-center">
                     Copyright © {currentYear}. @augusto.romera. All Rights Reserved.

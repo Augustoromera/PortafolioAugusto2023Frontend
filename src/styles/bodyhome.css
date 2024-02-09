@@ -70,7 +70,9 @@ body {
     color: #ffffff;
     width: 19.5ch;
     font-size: 2.5em;
-    animation: typing 2s steps(12), blink .5s infinite step-end alternate;
+    animation:
+        typing 2s steps(12),
+        blink 0.5s infinite step-end alternate;
     overflow: hidden;
 }
 @keyframes typing {
@@ -240,8 +242,6 @@ body {
     padding: 3rem;
 }
 
-
-
 .iconlink:hover {
     color: var(--gray) !important;
 }
@@ -257,6 +257,27 @@ body {
 .contact-me-text {
     padding-left: 50px;
 }
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3)  !important;
+    z-index: 100;
+}
+.btn-wsp:hover {
+    text-decoration: none;
+    color: #0df053;
+    background-color: #fff;
+}
+
 
 /* Media queries */
 @media (min-width: 991px) {
